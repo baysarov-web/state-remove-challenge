@@ -4,7 +4,8 @@ import { fakeDatabase } from "./fakeDatabase";
 function App() {
   const [challenges, setChallenges] = useState(fakeDatabase.challenges);
   const handleRemove = (id) => {
-   //тут твой код
+   const filterRemove = challenges.filter(item => item.id !== id)
+   setChallenges(filterRemove)
   };
 
   return (
